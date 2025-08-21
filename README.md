@@ -17,7 +17,5 @@ A simple command-line application that fetches the current weather for any city 
 4. Run the script and follow the prompt to enter a city name:
    python get_weather.py
 
-## Notes
 
-- Ensure your `.env` file is listed in `.gitignore` so your API key is not exposed on GitHub.  
-- You can customize the CLI output or extend the app to include additional weather information from the API.
+
