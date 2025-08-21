@@ -1,16 +1,18 @@
 import requests
 import os
 from dotenv import load_dotenv
+import streamlit as st
+
+st.title("🌤️ Weather App")
 
 # Load your API key from .env file
 load_dotenv()
 API_KEY = os.getenv("OPENWEATHER_API_KEY")
 
-def get_weather():
+def get_weather(city):
     """
     Fetch weather for the given city and print it nicely.
     """
-    city=input("Which city do you want information on?")
     # 1. Create the API endpoint URL
     url = "https://api.openweathermap.org/data/2.5/weather"
     
@@ -25,17 +27,18 @@ def get_weather():
     response = requests.get(url, params=params)
     
     # 4. Parse JSON
-    data = response.json()
-    
+    return response.json()
+city=st.text_input("What city do you want information on?")
+
+if st.button("Get weather results"):
+    data=get_weather(city)
     # 5. Extract key info
-    #print(data)
+    # #print(data)
     city_name = data["name"]
     temp = data["main"]["temp"]
     description = data["weather"][0]["description"]
     humidity=data["main"]["humidity"]
-    
     # 6. Print
-    print(f"In {city_name}, it is {temp}°C with {description} and humidity {humidity}.")
+    st.write(f"In {city_name}, it is {temp}°C with {description} and humidity {humidity}.")
 
-# Try it
-get_weather()
+
