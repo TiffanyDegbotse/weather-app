@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Weather CLI App
 
 This project fetches weather information for a city using the OpenWeatherMap API and prints it in the command line.
@@ -32,3 +33,26 @@ This project fetches weather information for a city using the OpenWeatherMap API
 To set up the project, first clone the repository with `git clone <your-repo-url>` and navigate into the folder with `cd <repo-folder>`. Create a `.env` file in the project root with your API key: `OPENWEATHER_API_KEY=your_api_key_here`. Install dependencies using `pip install -r requirements.txt`, which includes `streamlit`, `requests`, `python-dotenv`, and `pandas`.
 
 You can run the app in the command line by executing `python get_weather.py` and typing the city name when prompted. To use the Streamlit web app, run `streamlit run app.py`. This will open a local web app in your browser where you can enter a city name, see the current weather, and view charts for temperature and humidity trends over the next 5 days. The app also includes emojis to represent weather conditions like clear, cloudy, or rainy skies, making it visually engaging.
+=======
+# Weather CLI App
+
+A simple command-line application that fetches the current weather for any city using the OpenWeatherMap API. The app accepts city input from the user and displays temperature in Celsius, humidity, and a brief weather description.
+
+## Setup and Usage
+
+1. Clone the repository and navigate into the project folder:
+   git clone <your-repo-url>
+   cd <repo-folder>
+
+2. Create a `.env` file in the project root with your API key:
+   OPENWEATHER_API_KEY=your_api_key_here
+
+3. Install the required Python packages:
+   pip install -r requirements.txt
+
+4. Run the script and follow the prompt to enter a city name:
+   python get_weather.py
+
+
+
+>>>>>>> 0930bee661bc763d20a1e8e944e86c541e8df8b0
